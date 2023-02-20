@@ -1,0 +1,36 @@
+<div class="header">
+    <div class="site-image">
+        <img src="https://thumbs.dreamstime.com/b/tula-russia-january-amazon-logo-iphone-display-214570405.jpg" height="240" width="320">
+    </div>
+    <div class="site-slogan">
+        <h2>Your One Stop Shop for Everything</h2>
+    </div>
+</div>
+
+
+.header{
+    height:280px;
+    padding:50px 50px;
+    display:flex;
+    background-color:#ffff;
+}
+.site-slogan{
+    width:520px;
+    margin-left:40px;
+    text-align:center;
+}
+h2{
+    font-size:45px;
+}
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent {
+
+}
