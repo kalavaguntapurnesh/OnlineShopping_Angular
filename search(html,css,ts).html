@@ -1,0 +1,35 @@
+<div class="search-div">
+    <span><b>Search:</b></span>
+    <input type="text" (input)="changeSearchValue($event)">
+    <span *ngIf="searchValue != ''">You searched for "{{searchValue}}"</span>
+</div>
+
+
+.search-div{
+    margin:10px 20px;
+    padding:10px 20px;
+}
+input[type=text]{
+    width:240px;
+    height:30px;
+    margin-left:20px;
+    border:none;
+}
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
+})
+export class SearchComponent {
+      searchValue: string = '';
+      //we want the value from the view template
+      changeSearchValue(eventData: Event)
+      {
+        console.log((<HTMLInputElement>eventData.target).value);
+        this.searchValue = (<HTMLInputElement>eventData.target).value;   
+      }
+}
